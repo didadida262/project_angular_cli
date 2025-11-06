@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+out-tsc/
+bazel-out/
+
+# Coverage
+coverage/
+
+# Angular cache
+.angular/
+
+# Lock files
+*.lock
+
+# Generated files
+*.js
+*.d.ts
+!karma.conf.js
+
