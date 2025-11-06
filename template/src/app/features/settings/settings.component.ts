@@ -43,7 +43,7 @@ export class SettingsComponent {
     console.log('切换语言到:', lang);
   }
 
-  updateNotification(type: keyof typeof this.notifications.value, value: boolean): void {
+  updateNotification(type: 'email' | 'push' | 'sms', value: boolean): void {
     this.notifications.update(n => ({ ...n, [type]: value }));
   }
 
