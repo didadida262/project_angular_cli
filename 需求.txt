@@ -1,0 +1,9 @@
+实现类似vue或者react的项目创建脚手架。通过命令行选项的选择，创建一个干净的angular项目。
+技术选型：nodejs、angular
+
+1. “干净的angular项目”怎么定义？从一名资深的前端架构师的角度出发，配置必须且完善的最干净的angular模版级项目（自带一个欢迎页面和设置页面）
+2. 使用方法，类似于使用react等的脚手架。通过“npx create-react-app my-react-app”命令，会在当前目录下创建一个名为“my-react-app”的react项目，
+同理，希望是通过“npx create-DjAngular-app my-app”,能够在当前目录下创建一个基于我们脚手架的干净的angular项目
+
+
+
