@@ -27,7 +27,7 @@ npx create-DjAngular-app my-app
 
 ```bash
 cd my-app
-npm install  # 如果未自动安装
+npm install
 npm start
 ```
 
@@ -51,6 +51,14 @@ npx create-DjAngular-app my-angular-app
 ? 是否启用 E2E 测试? No
 ? 选择代码规范工具: ESLint (推荐)
 ? 选择包管理器: npm
+
+# 项目创建完成后，按提示操作
+✨ 项目创建成功!
+
+下一步：
+  cd my-angular-app
+  npm install
+  npm start
 ```
 
 ### 配置选项说明
@@ -68,9 +76,6 @@ npx create-DjAngular-app my-angular-app
 ### 命令行选项
 
 ```bash
-# 跳过依赖安装
-npx create-DjAngular-app my-app --skip-install
-
 # 跳过 Git 初始化
 npx create-DjAngular-app my-app --skip-git
 

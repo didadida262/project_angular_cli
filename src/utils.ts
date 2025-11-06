@@ -82,7 +82,7 @@ export function printSuccessMessage(projectName: string, packageManager: string)
   console.log();
   console.log(chalk.green('✨ 项目创建成功!'));
   console.log();
-  console.log('开始使用你的项目:');
+  console.log(chalk.bold('下一步：'));
   console.log();
   console.log(chalk.cyan(`  cd ${projectName}`));
   
@@ -90,13 +90,15 @@ export function printSuccessMessage(projectName: string, packageManager: string)
     console.log(chalk.cyan('  npm install'));
     console.log(chalk.cyan('  npm start'));
   } else if (packageManager === 'yarn') {
-    console.log(chalk.cyan('  yarn'));
+    console.log(chalk.cyan('  yarn install'));
     console.log(chalk.cyan('  yarn start'));
   } else {
     console.log(chalk.cyan('  pnpm install'));
     console.log(chalk.cyan('  pnpm start'));
   }
   
+  console.log();
+  console.log(chalk.dim('提示：项目已创建完成，请手动安装依赖后启动。'));
   console.log();
   console.log('快乐编码! 🎉');
   console.log();

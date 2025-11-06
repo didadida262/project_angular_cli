@@ -241,15 +241,18 @@ npx create-DjAngular-app my-app
 ? 选择代码规范工具: ESLint (推荐)
 ? 选择包管理器: npm
 
-# 3. 等待创建完成（2-3分钟）
+# 3. 等待创建完成（约 5-10 秒）
 
 # 4. 进入项目
 cd my-app
 
-# 5. 启动开发服务器
+# 5. 安装依赖
+npm install
+
+# 6. 启动开发服务器
 npm start
 
-# 6. 打开浏览器
+# 7. 打开浏览器
 # 访问 http://localhost:4200
 ```
 
@@ -280,13 +283,20 @@ rm /Users/miles_wang/.nvm/versions/node/v*/bin/create-DjAngular-app
 npm link
 ```
 
-### Q2: npm install 报错 tsc: command not found
+### Q2: 为什么不自动安装依赖？
 
 **原因：**
-`prepare` 脚本在安装依赖前运行，但 typescript 还没装。
+遵循现代脚手架趋势（如 create-vite、create-vue），让用户：
+- 自由选择安装时机
+- 选择自己喜欢的包管理器
+- 避免网络问题导致创建失败
+- 更快的项目创建体验
 
-**解决方案：**
-已修复，使用 `prepublishOnly` 替代 `prepare`。
+**手动安装：**
+```bash
+cd my-app
+npm install   # 或 yarn install / pnpm install
+```
 
 ### Q3: npm 缓存权限问题
 

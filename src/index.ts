@@ -30,7 +30,6 @@ async function main() {
     .description('创建一个干净的 Angular 项目脚手架')
     .version(packageJson.version)
     .argument('[project-name]', '项目名称')
-    .option('--skip-install', '跳过依赖安装')
     .option('--skip-git', '跳过 Git 初始化')
     .option('-t, --template <template>', '使用指定模板（暂未实现）')
     .action(async (projectName: string | undefined, options) => {
@@ -64,35 +63,6 @@ async function main() {
         // 生成项目
         const generator = new ProjectGenerator(config);
         await generator.generate();
-
-        console.log();
-
-        // 安装依赖
-        if (!options.skipInstall) {
-          const ora = (await import('ora')).default;
-          const spinner = ora('安装依赖包...').start();
-
-          try {
-            const { exec } = require('child_process');
-            const { promisify } = require('util');
-            const execAsync = promisify(exec);
-
-            const installCmd =
-              config.packageManager === 'npm'
-                ? 'npm install'
-                : config.packageManager === 'yarn'
-                ? 'yarn'
-                : 'pnpm install';
-
-            await execAsync(installCmd, { cwd: projectRoot });
-            spinner.succeed('依赖安装完成!');
-          } catch (error) {
-            spinner.fail('依赖安装失败');
-            logWarning('你可以稍后手动运行安装命令');
-          }
-        } else {
-          logWarning('已跳过依赖安装');
-        }
 
         // 打印成功消息
         console.log();
