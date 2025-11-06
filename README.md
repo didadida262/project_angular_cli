@@ -20,7 +20,15 @@
 ### 创建项目
 
 ```bash
-npx create-DjAngular-app my-app
+# 方式1：使用 npx（自动下载，会提示确认）
+npx create-djangular-app my-app
+
+# 方式2：使用 npx -y（跳过确认提示）
+npx -y create-djangular-app my-app
+
+# 方式3：全局安装后使用（一劳永逸，无提示）
+npm install -g create-djangular-app
+create-djangular-app my-app
 ```
 
 ### 运行项目
