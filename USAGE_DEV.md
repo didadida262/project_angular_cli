@@ -205,7 +205,7 @@ npm publish --access public
 
 # 在新目录测试
 cd ~/Desktop
-npx create-DjAngular-app test-from-npm
+npx create-djangular-app test-from-npm
 
 # 如果成功，说明发布OK
 ```
@@ -222,7 +222,7 @@ npx create-djangular-app my-app
 
 # 方式2：全局安装后使用
 npm install -g create-djangular-app
-create-DjAngular-app my-app
+create-djangular-app my-app
 ```
 
 ### 创建项目流程
@@ -279,7 +279,7 @@ npm link --force
 
 # 方法3：手动删除
 rm /Users/miles_wang/.nvm/versions/node/v*/bin/create-djangular-app
-rm /Users/miles_wang/.nvm/versions/node/v*/bin/create-DjAngular-app
+rm /Users/miles_wang/.nvm/versions/node/v*/bin/create-djangular-app
 npm link
 ```
 
@@ -432,7 +432,7 @@ cat ~/.npm-cache/_logs/*-debug.log
 ### 修改代码后
 - [ ] 编译：`npm run build`
 - [ ] 无 TypeScript 错误
-- [ ] 本地测试：`npm link && create-DjAngular-app test`
+- [ ] 本地测试：`npm link && create-djangular-app test`
 - [ ] 生成的项目可以正常运行：`cd test && npm start`
 - [ ] 检查欢迎页面和设置页面
 - [ ] 清理测试项目：`rm -rf test`
@@ -447,7 +447,7 @@ cat ~/.npm-cache/_logs/*-debug.log
 
 ### 发布后
 - [ ] 等待 5-10 分钟
-- [ ] 测试：`npx create-DjAngular-app@latest test-npm`
+- [ ] 测试：`npx create-djangular-app@latest test-npm`
 - [ ] 更新文档（如果需要）
 - [ ] 通知用户更新
 
