@@ -62,9 +62,13 @@ export class ProjectGenerator {
   private async copyTemplate(): Promise<void> {
     await fs.copy(this.templateRoot, this.projectRoot, {
       filter: (src) => {
-        // 过滤掉 node_modules 等目录
+        // 过滤掉 node_modules 等目录，但保留所有配置文件
         const relativePath = path.relative(this.templateRoot, src);
-        return !relativePath.includes('node_modules');
+        // 排除 node_modules 和 .angular 缓存
+        if (relativePath.includes('node_modules') || relativePath.includes('.angular')) {
+          return false;
+        }
+        return true;
       }
     });
   }
