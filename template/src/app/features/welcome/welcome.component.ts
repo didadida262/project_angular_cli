@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
-  projectName = '{{projectName}}';
+  projectName = 'My Angular App';
   version = '1.0.0';
   
   features = [

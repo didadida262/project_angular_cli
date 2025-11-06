@@ -59,6 +59,13 @@ npx create-DjAngular-app my-angular-app
   cd my-angular-app
   npm install
   npm start
+
+# 提示：生成的项目默认名称为 "My Angular App"
+# 你可以在以下文件中修改项目名称：
+# - package.json (name 字段)
+# - src/index.html (title 标签)
+# - src/app/app.component.ts (title 属性)
+# - README.md (标题)
 ```
 
 ### 配置选项说明

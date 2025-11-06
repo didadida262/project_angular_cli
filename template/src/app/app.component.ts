@@ -11,7 +11,7 @@ import { LoadingService } from './core/services/loading.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '{{projectName}}';
+  title = 'My Angular App';
   
   constructor(public loadingService: LoadingService) {}
 }

@@ -2,7 +2,7 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 import ora from 'ora';
 import { ProjectConfig } from './types';
-import { ensureDir, replaceTemplateVariables, logSuccess, logError } from './utils';
+import { ensureDir, logSuccess, logError } from './utils';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 
@@ -41,11 +41,7 @@ export class ProjectGenerator {
       await this.renameSpecialFiles();
       spinner.text = '处理配置文件...';
 
-      // 4. 替换模板变量
-      await this.replaceVariables();
-      spinner.text = '配置项目信息...';
-
-      // 5. 根据用户配置调整文件
+      // 4. 根据用户配置调整文件
       await this.adjustByConfig();
       spinner.text = '根据配置调整项目...';
 
@@ -94,34 +90,6 @@ export class ProjectGenerator {
       
       if (await fs.pathExists(fromPath)) {
         await fs.rename(fromPath, toPath);
-      }
-    }
-  }
-
-  /**
-   * 替换模板变量
-   */
-  private async replaceVariables(): Promise<void> {
-    const variables = {
-      projectName: this.config.projectName
-    };
-
-    const filesToReplace = [
-      'package.json',
-      'angular.json',
-      'README.md',
-      'karma.conf.js',
-      'src/index.html',
-      'src/app/app.component.ts',
-      'src/app/features/welcome/welcome.component.ts'
-    ];
-
-    for (const file of filesToReplace) {
-      const filePath = path.join(this.projectRoot, file);
-      if (await fs.pathExists(filePath)) {
-        let content = await fs.readFile(filePath, 'utf-8');
-        content = replaceTemplateVariables(content, variables);
-        await fs.writeFile(filePath, content, 'utf-8');
       }
     }
   }

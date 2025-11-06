@@ -359,6 +359,10 @@ npm link
 create-DjAngular-app test-new-template
 ```
 
+**注意**：模板是固定的项目，不使用变量替换。
+- 默认项目名称：`My Angular App`
+- 用户可以在生成后自行修改 `package.json`、`index.html` 等文件中的项目名称
+
 ### Q7: 如何添加新的配置选项？
 
 1. 修改 `src/types.ts` 添加新字段

@@ -1,4 +1,4 @@
-# {{projectName}}
+# My Angular App
 
 这个项目使用 [Create-DjAngular-App](https://github.com/your-repo/create-djangular-app) 创建。
 
