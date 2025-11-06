@@ -9,8 +9,9 @@ node_modules/
 .idea/
 需求.txt
 PRD.md
-template/.gitignore
-template/.editorconfig
-template/.eslintrc.json
-template/.prettierrc
+USAGE_DEV.md
+CHANGELOG.md
+CONTRIBUTING.md
+template/node_modules
+template/.vscode
 
