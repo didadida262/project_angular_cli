@@ -177,10 +177,10 @@ export class ProjectGenerator {
    */
   private async updatePackageJson(): Promise<void> {
     const pkgPath = path.join(this.projectRoot, 'package.json');
-    const pkg = await fs.readJson(pkgPath);
+    const pkg: any = await fs.readJson(pkgPath);
 
     // 根据配置移除不需要的依赖
-    if (!this.config.unitTesting) {
+    if (!this.config.unitTesting && pkg.devDependencies) {
       const testDeps = [
         '@types/jasmine',
         'jasmine-core',
@@ -195,10 +195,12 @@ export class ProjectGenerator {
         delete pkg.devDependencies[dep];
       });
 
-      pkg.scripts.test = 'echo "No tests configured"';
+      if (pkg.scripts) {
+        pkg.scripts.test = 'echo "No tests configured"';
+      }
     }
 
-    if (this.config.linter === 'none') {
+    if (this.config.linter === 'none' && pkg.devDependencies) {
       const lintDeps = [
         '@angular-eslint/builder',
         '@angular-eslint/eslint-plugin',
@@ -214,7 +216,9 @@ export class ProjectGenerator {
         delete pkg.devDependencies[dep];
       });
 
-      pkg.scripts.lint = 'echo "No linter configured"';
+      if (pkg.scripts) {
+        pkg.scripts.lint = 'echo "No linter configured"';
+      }
     }
 
     await fs.writeJson(pkgPath, pkg, { spaces: 2 });

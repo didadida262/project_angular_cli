@@ -6,7 +6,7 @@ import { validateProjectName } from './utils';
  * 收集项目配置信息
  */
 export async function collectProjectConfig(projectName?: string): Promise<ProjectConfig> {
-  const questions: inquirer.QuestionCollection = [];
+  const questions: any[] = [];
 
   // 如果未提供项目名称，询问
   if (!projectName) {
