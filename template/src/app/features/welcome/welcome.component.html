@@ -1,0 +1,56 @@
+<div class="welcome-container">
+  <header class="welcome-header">
+    <h1>🎉 欢迎使用 {{ projectName }}</h1>
+    <p class="version">版本 {{ version }}</p>
+    <p class="subtitle">一个干净、现代的 Angular 项目模板</p>
+  </header>
+
+  <section class="features">
+    <h2>✨ 特性</h2>
+    <div class="features-grid">
+      @for (feature of features; track feature.title) {
+        <div class="feature-card">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="quick-start">
+    <h2>🚀 快速开始</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <p>探索项目结构，了解各模块职责</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <p>查看<a routerLink="/settings">设置页面</a>，体验功能示例</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <p>开始开发你的业务功能</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources">
+    <h2>📚 学习资源</h2>
+    <ul class="resource-list">
+      @for (resource of resources; track resource.name) {
+        <li>
+          <a [href]="resource.url" target="_blank" rel="noopener">
+            {{ resource.name }} →
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <footer class="welcome-footer">
+    <p>使用 <a href="https://github.com/your-repo/create-djangular-app" target="_blank">Create-DjAngular-App</a> 创建</p>
+  </footer>
+</div>
+

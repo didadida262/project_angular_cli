@@ -1,0 +1,12 @@
+src/
+tsconfig.json
+.gitignore
+*.log
+*.md
+!README.md
+node_modules/
+.vscode/
+.idea/
+需求.txt
+PRD.md
+

@@ -1,0 +1,26 @@
+<div class="app-container">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>{{ title }}</h1>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/welcome" routerLinkActive="active">欢迎</a>
+      </li>
+      <li>
+        <a routerLink="/settings" routerLinkActive="active">设置</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    @if (loadingService.isLoading()) {
+      <div class="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+    }
+    
+    <router-outlet />
+  </main>
+</div>
+
