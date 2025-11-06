@@ -1,4 +1,4 @@
-# Create-DjAngular-App
+# create-djangular-app
 
 > 一个类似 `create-react-app` 的 Angular 项目脚手架工具，快速创建干净、规范的 Angular 项目。
 
@@ -48,7 +48,7 @@ npm start
 运行命令后，会出现交互式配置界面：
 
 ```bash
-npx create-DjAngular-app my-angular-app
+npx create-djangular-app my-angular-app
 
 # 回答配置问题
 ? 请输入项目名称: my-angular-app
@@ -92,13 +92,13 @@ npx create-DjAngular-app my-angular-app
 
 ```bash
 # 跳过 Git 初始化
-npx create-DjAngular-app my-app --skip-git
+npx create-djangular-app my-app --skip-git
 
 # 查看版本
-npx create-DjAngular-app --version
+npx create-djangular-app --version
 
 # 查看帮助
-npx create-DjAngular-app --help
+npx create-djangular-app --help
 ```
 
 ## 📁 生成的项目结构
@@ -393,4 +393,4 @@ MIT License
 
 ---
 
-**Made with ❤️ by DjAngular Team**
+**Made with ❤️ by create-djangular-app Team**

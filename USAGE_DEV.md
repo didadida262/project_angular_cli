@@ -1,4 +1,4 @@
-# Create-DjAngular-App 使用文档
+# create-djangular-app 使用文档
 
 ## 📋 目录
 - [开发模式](#开发模式)
@@ -71,7 +71,7 @@ npm unlink -g create-djangular-app
 
 # 或者强制删除
 rm -f /Users/miles_wang/.nvm/versions/node/v*/bin/create-djangular-app
-rm -f /Users/miles_wang/.nvm/versions/node/v*/bin/create-DjAngular-app
+rm -f /Users/miles_wang/.nvm/versions/node/v*/bin/create-djangular-app
 ```
 
 #### Step 2: 创建新链接
@@ -94,7 +94,7 @@ npm link
 cd /tmp
 
 # 创建测试项目
-create-DjAngular-app test-app
+create-djangular-app test-app
 
 # 或者
 create-djangular-app test-app
@@ -218,7 +218,7 @@ npx create-DjAngular-app test-from-npm
 
 ```bash
 # 方式1：使用 npx（推荐，无需安装）
-npx create-DjAngular-app my-app
+npx create-djangular-app my-app
 
 # 方式2：全局安装后使用
 npm install -g create-djangular-app
@@ -229,7 +229,7 @@ create-DjAngular-app my-app
 
 ```bash
 # 1. 运行命令
-npx create-DjAngular-app my-app
+npx create-djangular-app my-app
 
 # 2. 回答配置问题
 ? 请输入项目名称: my-app
@@ -265,7 +265,7 @@ npm start
 **错误信息：**
 ```
 npm ERR! code EEXIST
-npm ERR! File exists: /path/to/bin/create-DjAngular-app
+npm ERR! File exists: /path/to/bin/create-djangular-app
 ```
 
 **解决方案：**
@@ -356,7 +356,7 @@ npm run build
 
 # 测试
 npm link
-create-DjAngular-app test-new-template
+create-djangular-app test-new-template
 ```
 
 **注意**：模板是固定的项目，不使用变量替换。
@@ -381,7 +381,7 @@ npm run build
 
 # 3. 本地测试
 npm link
-create-DjAngular-app test-fix
+create-djangular-app test-fix
 
 # 4. 更新版本
 npm version patch
@@ -390,7 +390,7 @@ npm version patch
 npm publish
 
 # 6. 用户更新
-npx create-DjAngular-app@latest my-app
+npx create-djangular-app@latest my-app
 ```
 
 ---
@@ -464,7 +464,7 @@ npm run dev          # 监听模式编译
 # 测试
 npm link             # 本地链接
 npm unlink -g pkg    # 取消链接
-create-DjAngular-app # 测试命令
+create-djangular-app # 测试命令
 
 # 发布
 npm version patch    # 更新版本

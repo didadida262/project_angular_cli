@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你考虑为 Create-DjAngular-App 做出贡献！
+感谢你考虑为 create-djangular-app 做出贡献！
 
 ## 如何贡献
 

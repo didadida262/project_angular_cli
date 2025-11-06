@@ -1,12 +1,12 @@
 # 产品需求文档 (PRD)
-## Create-DjAngular-App 脚手架工具
+## create-djangular-app 脚手架工具
 
 ---
 
 ## 文档信息
 | 项目 | 信息 |
 |------|------|
-| 产品名称 | Create-DjAngular-App |
+| 产品名称 | create-djangular-app |
 | 文档版本 | v1.0 |
 | 创建日期 | 2025-11-06 |
 | 文档类型 | 产品需求文档 |
@@ -21,7 +21,7 @@
 当前前端生态中，React、Vue 等框架都提供了便捷的脚手架工具（如 create-react-app、Vue CLI），使开发者能够快速初始化项目。虽然 Angular 官方提供了 Angular CLI，但缺乏一个定制化、开箱即用且符合团队规范的企业级脚手架工具。
 
 ### 1.2 产品定位
-Create-DjAngular-App 是一个基于 Node.js 的命令行脚手架工具，旨在为开发者提供一键创建符合最佳实践的 Angular 项目模板，减少项目初始化配置时间，提升开发效率。
+create-djangular-app 是一个基于 Node.js 的命令行脚手架工具，旨在为开发者提供一键创建符合最佳实践的 Angular 项目模板，减少项目初始化配置时间，提升开发效率。
 
 ### 1.3 核心价值
 - **开箱即用**：预配置完善的项目结构和开发环境
@@ -78,7 +78,7 @@ Create-DjAngular-App 是一个基于 Node.js 的命令行脚手架工具，旨�
 
 **使用方式**：
 ```bash
-npx create-DjAngular-app my-app
+npx create-djangular-app my-app
 ```
 
 **预期行为**：
@@ -286,7 +286,7 @@ my-app/
 
 **验收标准**：
 - Given 我在终端中
-- When 我执行 `npx create-DjAngular-app my-project`
+- When 我执行 `npx create-djangular-app my-project`
 - Then 系统在当前目录创建 my-project 文件夹
 - And 项目包含完整的配置和示例页面
 - And 我可以立即运行 `cd my-project && npm start` 启动项目
@@ -354,7 +354,7 @@ my-app/
 - 通过 npm 发布为公共包
 - 包名：`create-djangular-app`
 - 使用 npx 直接运行，无需全局安装
-- 配置 bin 字段，支持 `create-DjAngular-app` 命令
+- 配置 bin 字段，支持 `create-djangular-app` 命令
 
 ---
 

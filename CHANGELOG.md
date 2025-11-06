@@ -6,7 +6,7 @@
 
 ### 新增
 - 🎉 初始版本发布
-- ✨ 支持通过 `npx create-DjAngular-app` 快速创建 Angular 项目
+- ✨ 支持通过 `npx create-djangular-app` 快速创建 Angular 项目
 - 🎨 交互式配置界面，支持选择项目配置选项
 - 📦 预配置完善的项目结构（Core/Shared/Features 模块）
 - 🏠 内置欢迎页面和设置页面示例
