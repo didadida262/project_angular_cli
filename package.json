@@ -4,8 +4,7 @@
   "description": "A CLI tool to create clean Angular projects with best practices",
   "main": "dist/index.js",
   "bin": {
-    "create-djangular-app": "./dist/index.js",
-    "create-DjAngular-app": "./dist/index.js"
+    "create-djangular-app": "./dist/index.js"
   },
   "files": [
     "dist",
