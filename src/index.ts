@@ -21,7 +21,7 @@ const program = new Command();
 async function main() {
   console.log();
   console.log(chalk.cyan.bold('╔══════════════════════════════════════╗'));
-  console.log(chalk.cyan.bold('║   create-djangular-app CLI Tool     ║'));
+  console.log(chalk.cyan.bold('║   Create-Djangular-App CLI Tool     ║'));
   console.log(chalk.cyan.bold('╚══════════════════════════════════════╝'));
   console.log();
 
