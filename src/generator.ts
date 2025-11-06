@@ -37,11 +37,7 @@ export class ProjectGenerator {
       await this.copyTemplate();
       spinner.text = '拷贝项目模板...';
 
-      // 3. 处理特殊文件名（以 _ 开头的文件重命名为 .）
-      await this.renameSpecialFiles();
-      spinner.text = '处理配置文件...';
-
-      // 4. 根据用户配置调整文件
+      // 3. 根据用户配置调整文件
       await this.adjustByConfig();
       spinner.text = '根据配置调整项目...';
 
@@ -71,27 +67,6 @@ export class ProjectGenerator {
         return !relativePath.includes('node_modules');
       }
     });
-  }
-
-  /**
-   * 重命名特殊文件（_gitignore -> .gitignore）
-   */
-  private async renameSpecialFiles(): Promise<void> {
-    const renames = [
-      { from: '_gitignore', to: '.gitignore' },
-      { from: '_editorconfig', to: '.editorconfig' },
-      { from: '_eslintrc.json', to: '.eslintrc.json' },
-      { from: '_prettierrc', to: '.prettierrc' }
-    ];
-
-    for (const { from, to } of renames) {
-      const fromPath = path.join(this.projectRoot, from);
-      const toPath = path.join(this.projectRoot, to);
-      
-      if (await fs.pathExists(fromPath)) {
-        await fs.rename(fromPath, toPath);
-      }
-    }
   }
 
   /**
