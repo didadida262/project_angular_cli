@@ -8,7 +8,15 @@
   },
   "files": [
     "dist",
-    "template"
+    "template/**/*",
+    "template/.gitignore",
+    "template/.editorconfig",
+    "template/.eslintrc.json",
+    "template/.prettierrc",
+    "template/.eslintignore",
+    "template/.prettierignore",
+    "template/.vscode/settings.json",
+    "template/.vscode/extensions.json"
   ],
   "scripts": {
     "build": "tsc",

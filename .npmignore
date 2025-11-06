@@ -1,19 +1,15 @@
 # CLI 工具的源码和配置（不需要发布）
 src/
 tsconfig.json
-/.gitignore
-/.editorconfig
-/.eslintrc.json
-/.prettierrc
-/.npmignore
+.gitignore
+.npmignore
 
 # 日志
 *.log
 
-# 文档（只保留 README.md 和 template/README.md）
+# 文档（只保留 README.md）
 *.md
 !README.md
-!template/README.md
 
 # 依赖和 IDE
 node_modules/
@@ -27,20 +23,11 @@ USAGE_DEV.md
 CHANGELOG.md
 CONTRIBUTING.md
 
-# template 中不需要的文件
+# template 中不需要的临时文件
 template/node_modules/
-template/.vscode/
 template/.angular/
 template/dist/
 template/coverage/
 template/yarn.lock
 template/package-lock.json
 template/pnpm-lock.yaml
-
-# ⭐ 重要：明确包含 template 的配置文件（覆盖 npm 默认规则）
-!template/.gitignore
-!template/.editorconfig
-!template/.eslintrc.json
-!template/.prettierrc
-!template/.eslintignore
-!template/.prettierignore
