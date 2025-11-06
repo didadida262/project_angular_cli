@@ -479,13 +479,5 @@ npm cache clean -f   # 清理缓存
 
 ---
 
-## 📞 获取帮助
-
-- **GitHub Issues**: 报告 bug 或功能请求
-- **文档**: 查看 README.md
-- **源码**: 参考 src/ 目录
-
----
-
 **祝开发顺利！** 🎉
 

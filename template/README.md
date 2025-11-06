@@ -19,7 +19,3 @@
 运行 `npm run lint` 检查代码规范。
 运行 `npm run format` 格式化代码。
 
-## 更多帮助
-
-访问 [Angular CLI 文档](https://angular.io/cli) 获取更多帮助。
-
