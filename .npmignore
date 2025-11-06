@@ -1,17 +1,38 @@
+# CLI 工具的源码和配置（不需要发布）
 src/
 tsconfig.json
 /.gitignore
+/.editorconfig
+/.eslintrc.json
+/.prettierrc
+/.npmignore
+
+# 日志
 *.log
+
+# 文档（只保留 README.md 和 template/README.md）
 *.md
 !README.md
+!template/README.md
+
+# 依赖和 IDE
 node_modules/
 .vscode/
 .idea/
+
+# 项目相关文档
 需求.txt
 PRD.md
 USAGE_DEV.md
 CHANGELOG.md
 CONTRIBUTING.md
-template/node_modules
-template/.vscode
 
+# template 中不需要的文件
+template/node_modules/
+template/.vscode/
+template/.angular/
+template/dist/
+template/coverage/
+template/yarn.lock
+template/package-lock.json
+template/pnpm-lock.yaml
