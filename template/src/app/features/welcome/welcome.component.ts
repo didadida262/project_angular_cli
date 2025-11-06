@@ -35,12 +35,5 @@ export class WelcomeComponent {
       description: 'TypeScript、ESLint、Prettier全面配置'
     }
   ];
-
-  resources = [
-    { name: 'Angular 文档', url: 'https://angular.io/docs' },
-    { name: 'Angular CLI', url: 'https://angular.io/cli' },
-    { name: 'RxJS 文档', url: 'https://rxjs.dev/' },
-    { name: 'TypeScript 文档', url: 'https://www.typescriptlang.org/docs/' }
-  ];
 }
 

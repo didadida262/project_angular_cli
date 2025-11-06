@@ -18,37 +18,6 @@
     </div>
   </section>
 
-  <section class="quick-start">
-    <h2>🚀 快速开始</h2>
-    <div class="steps">
-      <div class="step">
-        <span class="step-number">1</span>
-        <p>探索项目结构，了解各模块职责</p>
-      </div>
-      <div class="step">
-        <span class="step-number">2</span>
-        <p>查看<a routerLink="/settings">设置页面</a>，体验功能示例</p>
-      </div>
-      <div class="step">
-        <span class="step-number">3</span>
-        <p>开始开发你的业务功能</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="resources">
-    <h2>📚 学习资源</h2>
-    <ul class="resource-list">
-      @for (resource of resources; track resource.name) {
-        <li>
-          <a [href]="resource.url" target="_blank" rel="noopener">
-            {{ resource.name }} →
-          </a>
-        </li>
-      }
-    </ul>
-  </section>
-
   <footer class="welcome-footer">
     <p>使用 <a href="https://github.com/your-repo/create-djangular-app" target="_blank">Create-DjAngular-App</a> 创建</p>
   </footer>
