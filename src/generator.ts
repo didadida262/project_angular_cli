@@ -61,13 +61,22 @@ export class ProjectGenerator {
    */
   private async copyTemplate(): Promise<void> {
     await fs.copy(this.templateRoot, this.projectRoot, {
+      // 明确拷贝所有文件，包括 dotfiles
+      overwrite: true,
+      errorOnExist: false,
       filter: (src) => {
-        // 过滤掉 node_modules 等目录，但保留所有配置文件
+        // 过滤掉 node_modules 等目录，但保留所有配置文件（包括 .gitignore）
         const relativePath = path.relative(this.templateRoot, src);
-        // 排除 node_modules 和 .angular 缓存
-        if (relativePath.includes('node_modules') || relativePath.includes('.angular')) {
+        
+        // 排除特定目录
+        if (relativePath.includes('node_modules') || 
+            relativePath.includes('.angular') ||
+            relativePath.includes('dist') ||
+            relativePath.includes('coverage')) {
           return false;
         }
+        
+        // 包含所有其他文件，特别是 dotfiles
         return true;
       }
     });
