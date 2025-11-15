@@ -132,13 +132,20 @@ my-app/
 │   ├── index.html                   # HTML入口
 │   └── main.ts                      # TypeScript入口
 ├── .vscode/                         # VSCode配置
+│   ├── settings.json                # 编辑器设置
+│   └── extensions.json              # 推荐插件
 ├── .editorconfig                    # 编辑器配置
 ├── .eslintrc.json                   # ESLint配置
+├── .eslintignore                    # ESLint忽略规则
 ├── .gitignore                       # Git忽略文件
 ├── .prettierrc                      # Prettier配置
+├── .prettierignore                  # Prettier忽略规则
 ├── angular.json                     # Angular配置
 ├── package.json                     # 依赖配置
 ├── tsconfig.json                    # TypeScript配置
+├── tsconfig.app.json                # 应用TS配置
+├── tsconfig.spec.json               # 测试TS配置
+├── karma.conf.js                    # Karma测试配置
 └── README.md                        # 项目文档
 ```
 
