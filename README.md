@@ -101,6 +101,49 @@ npx create-djangular-app --version
 npx create-djangular-app --help
 ```
 
+## 📁 CLI 工具项目结构
+
+本 CLI 工具采用模板拷贝方式，项目结构如下：
+
+```
+create-djangular-app/
+├── src/                          # CLI 工具源代码
+│   ├── index.ts                  # 入口文件
+│   ├── generator.ts              # 项目生成逻辑
+│   ├── prompts.ts                # 交互式提示
+│   ├── types.ts                  # TypeScript 类型定义
+│   └── utils.ts                  # 工具函数
+├── template/                     # Angular 项目模板（核心）
+│   ├── src/                      # 模板源代码
+│   │   ├── app/                  # 应用代码
+│   │   │   ├── core/             # 核心模块
+│   │   │   ├── shared/           # 共享模块
+│   │   │   └── features/         # 功能模块
+│   │   ├── assets/               # 静态资源
+│   │   ├── environments/         # 环境配置
+│   │   └── styles/               # 全局样式
+│   ├── .vscode/                  # VSCode 配置
+│   ├── .editorconfig             # 编辑器配置
+│   ├── .eslintrc.json            # ESLint 配置
+│   ├── .eslintignore             # ESLint 忽略规则
+│   ├── .gitignore                # Git 忽略文件
+│   ├── .prettierrc               # Prettier 配置
+│   ├── .prettierignore           # Prettier 忽略规则
+│   ├── angular.json              # Angular 配置
+│   ├── package.json              # 依赖配置
+│   ├── tsconfig.json             # TypeScript 配置
+│   └── README.md                 # 项目文档
+├── dist/                         # 编译后的 JavaScript 代码
+├── package.json                  # CLI 工具配置
+├── tsconfig.json                 # TypeScript 配置
+└── README.md                     # 本文档
+```
+
+**工作原理：**
+- CLI 工具会直接将 `template/` 目录中的完整 Angular 项目拷贝到用户指定的目录
+- 模板项目是一个完整的、可直接运行的 Angular 项目
+- 用户可以通过修改 `template/` 目录来自定义生成的项目结构
+
 ## 📁 生成的项目结构
 
 ```
